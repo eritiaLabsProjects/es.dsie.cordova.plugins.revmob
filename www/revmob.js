@@ -1,12 +1,9 @@
-var RevMob = function() {
-);
-	//this.appId = appId;
+var RevMob = function() {};
 RevMob.prototype.TEST_DISABLED = 0;
 RevMob.prototype.TEST_WITH_ADS = 1;
 RevMob.prototype.TEST_WITHOUT_ADS = 2;
 
 RevMob.prototype.startSession= function(appId) {
-    this.appId = appId;
     cordova.exec(function(successParams){}, function(errorParams){}, "RevMobPlugin", "startSession", [appId]);
   };
 
