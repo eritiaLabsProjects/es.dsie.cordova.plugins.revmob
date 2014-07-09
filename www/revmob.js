@@ -1,46 +1,47 @@
 var RevMob = function() {
+);
 	//this.appId = appId;
-	this.TEST_DISABLED = 0;
-	this.TEST_WITH_ADS = 1;
-	this.TEST_WITHOUT_ADS = 2;
+RevMob.prototype.TEST_DISABLED = 0;
+RevMob.prototype.TEST_WITH_ADS = 1;
+RevMob.prototype.TEST_WITHOUT_ADS = 2;
 
-  this.startSession(appId) = function(appId) {
+RevMob.prototype.startSession= function(appId) {
     this.appId = appId;
     cordova.exec(function(successParams){}, function(errorParams){}, "RevMobPlugin", "startSession", [appId]);
-  }
+  };
 
-	this.showFullscreen = function(successCallback, errorCallback) {
+RevMob.prototype.showFullscreen = function(successCallback, errorCallback) {
 		cordova.exec(successCallback, errorCallback, "RevMobPlugin", "showFullscreen", []);
-	}
+	};
 
-	this.openAdLink = function(successCallback, errorCallback) {
+RevMob.prototype.openAdLink = function(successCallback, errorCallback) {
 		cordova.exec(successCallback, errorCallback, "RevMobPlugin", "openAdLink", []);
-	}
+	};
 
-	this.showPopup = function(successCallback, errorCallback) {
+RevMob.prototype.showPopup = function(successCallback, errorCallback) {
 		cordova.exec(successCallback, errorCallback, "RevMobPlugin", "showPopup", []);
 	}
 
-	this.showBanner = function(successCallback, errorCallback) {
+RevMob.prototype.showBanner = function(successCallback, errorCallback) {
 		cordova.exec(successCallback, errorCallback, "RevMobPlugin", "showBanner", []);
-	}
+	};
 
-	this.hideBanner = function(successCallback, errorCallback) {
+RevMob.prototype.hideBanner = function(successCallback, errorCallback) {
 		cordova.exec(successCallback, errorCallback, "RevMobPlugin", "hideBanner", []);
-	}
+	};
 
-	this.setTestingMode = function(testingMode) {
+RevMob.prototype.setTestingMode = function(testingMode) {
 		cordova.exec(null, null, "RevMobPlugin", "setTestingMode", [testingMode]);
-	}
+	};
 
-	this.printEnvironmentInformation = function() {
+RevMob.prototype.printEnvironmentInformation = function() {
 		cordova.exec(null, null, "RevMobPlugin", "printEnvironmentInformation", []);
-	}
+	};
 
-	this.setTimeoutInSeconds = function(seconds) {
+RevMob.prototype.setTimeoutInSeconds = function(seconds) {
 		cordova.exec(null, null, "RevMobPlugin", "setTimeoutInSeconds", [seconds]);
-	}
+	};
 	
-}
 
-module.exports = RevMob;
+
+module.exports = new RevMob();
