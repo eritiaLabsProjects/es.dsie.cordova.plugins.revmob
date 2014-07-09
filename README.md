@@ -1,4 +1,4 @@
-es.dsie.cordova.plugins.revmob
-==============================
+es.dsie.cordova.plugins.leadbolt
+================================
 
-es.dsie.cordova.plugins.revmob
+Phonegap Plugin es.dsie.cordova.plugins.leadbolt
