@@ -1,4 +1,4 @@
-function RevMob() {
+var RevMob = function() {
 	this.appId = appId;
 	this.TEST_DISABLED = 0;
 	this.TEST_WITH_ADS = 1;
@@ -41,7 +41,6 @@ function RevMob() {
 		cordova.exec(null, null, "RevMobPlugin", "setTimeoutInSeconds", [seconds]);
 	}
 	
-	return this;
 }
 
 module.exports = RevMob;
