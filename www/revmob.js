@@ -1,5 +1,5 @@
 var RevMob = function() {
-	this.appId = appId;
+	//this.appId = appId;
 	this.TEST_DISABLED = 0;
 	this.TEST_WITH_ADS = 1;
 	this.TEST_WITHOUT_ADS = 2;
