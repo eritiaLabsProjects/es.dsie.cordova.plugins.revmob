@@ -42,7 +42,7 @@
               <param name="android-package" value="com.revmob.cordova.RevMobPlugin"/>
             </feature>
             
-	      </config-file>
+        </config-file>
 
         <source-file src="src/android/libs/revmob-android-wrapper.jar" target-dir="libs/"/>
 
@@ -63,10 +63,10 @@
 
     <!-- ios 
     <platform name="ios">
-        <feature name="AdController">
-		        <param name="ios-package" value="LBPhonegapPlugin" />
-		        <param name="onload" value="true" />
-	      </feature>
+        <feature name="RevMobPlugin">
+            <param name="ios-package" value="LBPhonegapPlugin" />
+            <param name="onload" value="true" />
+        </feature>
       
       <header-file src="src/ios/LBHeaders/JSONKit.h" />
       <header-file src="src/ios/LBHeaders/LeadboltOverlay.h" />

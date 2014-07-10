@@ -3,8 +3,8 @@ var RevMob = {};
 RevMob.TEST_WITH_ADS = 1;
 RevMob.TEST_WITHOUT_ADS = 2;
 
-RevMob.startSession= function(appId) {
-    cordova.exec(function(successParams){}, function(errorParams){}, "RevMobPlugin", "startSession", [appId]);
+RevMob.startSession= function(appId,successCallback, errorCallback) {
+    cordova.exec(successCallback, errorCallback, "RevMobPlugin", "startSession", [appId]);
   };
 
 RevMob.showFullscreen = function(successCallback, errorCallback) {
